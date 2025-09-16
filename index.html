@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Signup Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+  <h1> PLP Tech Conference 2025</h1>
+  <p>Join innovators and creators for a day of learning.</p>
+  <a href="#signup-form" class="cta">Register Now</a>
+</header>
+
+<section class="countdown">
+  <h2>Countdown to Event</h2>
+  <div class="timer">
+    <div><span id="days">0</span><p>Days</p></div>
+    <div><span id="hours">0</span><p>Hours</p></div>
+    <div><span id="minutes">0</span><p>Minutes</p></div>
+    <div><span id="seconds">0</span><p>Seconds</p></div>
+  </div>
+</section>
+
+<section class="speakers">
+  <h2>Meet the Speakers</h2>
+  <div class="speaker-list">
+    
+    <div class="speaker-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/chakin.jpg" alt="Speaker 1">
+          <h3>Jane Doe</h3>
+          <p>Tech Innovator</p>
+        </div>
+        <div class="card-back">
+          <h3>Chakin Kim</h3>
+          <p>Chakin is a leading voice in AI and innovation, inspiring the next generation of tech leaders.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="speaker-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src = "images/wale.jpg" height="200px" alt="Speaker 2">
+          <h3>John Smith</h3>
+          <p>Startup Founder</p>
+        </div>
+        <div class="card-back">
+          <h3>Olawoyin Olawale</h3>
+          <p>Olawale built one of the fastest-growing startups in Africa, focusing on financial inclusion.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="speaker-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/zablon.jpg" alt="Speaker 3">
+          <h3>Mary Johnson</h3>
+          <p>Software Engineer</p>
+        </div>
+        <div class="card-back">
+          <h3>Zablon Oigo</h3>
+          <p>Zablon is a researcher exploring the world of software engineering.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="schedule">
+  <div class="section-header">
+    <h1>Event Schedule</h1>
+  </div>
+
+  <div class="accordion">
+    <div class="acc-item">
+      <div class="acc-head">10:00 — 11:00: Opening Keynote — Chakin Kim</div>
+      <div class="acc-body">Chakin talks about the future of web standards and product design.</div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head">11:15 — 12:00: Workshop: Fast Prototyping — Olawoyin Olawale</div>
+      <div class="acc-body">Hands-on workshop: from idea to prototype in 30 minutes using vanilla tools.</div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-head">14:00 — 15:00: Panel: The Dev Designer — Zablon Oigo</div>
+      <div class="acc-body">Discussion on bridging design and engineering in product teams.</div>
+    </div>
+  </div>
+</section>
+
+<section id="signup-form">
+    <div class="form-container">
+        <div class="header">
+            <h1>PLP Tech conference 2025</h1>
+            <p>Reserve your seat at the premier tech conference</p>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            🎉 Registration successful! Check your email for confirmation details.
+        </div>
+
+        <form id="eventSignupForm">
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <div class="error-message" id="nameError">Please enter your full name</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label for="ticketType">Ticket Type *</label>
+                <select id="ticketType" name="ticketType" required>
+                    <option value="">Select your ticket type</option>
+                    <option value="early-bird">Early Bird - $199</option>
+                    <option value="regular">Regular - $299</option>
+                    <option value="vip">VIP - $499</option>
+                    <option value="student">Student - $99</option>
+                </select>
+                <div class="error-message" id="ticketError">Please select a ticket type</div>
+                
+                <div class="ticket-options">
+                    <div class="ticket-option">
+                        <span>Early Bird (Limited Time)</span>
+                        <span class="price">$199</span>
+                    </div>
+                    <div class="ticket-option">
+                        <span>Regular Access</span>
+                        <span class="price">$299</span>
+                    </div>
+                    <div class="ticket-option">
+                        <span>VIP (Networking + Premium Seating)</span>
+                        <span class="price">$499</span>
+                    </div>
+                    <div class="ticket-option">
+                        <span>Student (Valid ID Required)</span>
+                        <span class="price">$99</span>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <span id="btnText">Reserve My Seat</span>
+                <div class="loading" id="loading"></div>
+            </button>
+        </form>
+
+        <div class="form-footer">
+            <p>Questions? Contact us at <strong>info@techcon2025.com</strong></p>
+        </div>
+    </div>
+
+
+</section>
+<script src="script.js"></script>
+</body>
+</html>
